@@ -41,11 +41,11 @@ terraform apply --auto-approve
 
 5. Recorded outputs:
 
-EC2 public IP: `98.81.117.68`
+EC2 public IP: 98.81.117.68
 
 RDS endpoint: `terraform-20260211100738749300000001.c4hycg8uaqla.us-east-1.rds.amazonaws.com`
 
-Website URL: `http://98.81.117.68`
+Website URL: http://98.81.117.68
 ![terraform](./images/terraform%20apply.jpg)
 
 ## Security group configurations
