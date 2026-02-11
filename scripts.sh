@@ -20,10 +20,10 @@ wget https://download.prestashop.com/download/releases/prestashop_edition_basic_
 unzip prestashop_edition_basic_version_9.0.3-3.0.zip
 unzip prestashop.zip
 
-# Move extracted files to web root
+# Move extracted files to root
 mv prestashop/* /var/www/html/
 
-# permissions for Apache
+# change permissions for Apache
 chown -R www-data:www-data /var/www/html
 chmod -R 755 /var/www/html
 
