@@ -30,7 +30,7 @@ This document outlines the deployment of PrestaShop on AWS using Terraform. The 
 
 * **Internet Gateway** and Route Tables for public access.
 
-3. Defined my `provider.tf` , `variables.tf` , `output.tf` and `script.sh`. In my `provider.tf` is where the provider I want to use, which is AWS is defined. The values I don't want exposed were put in my `variables.tf` and `output.tf` is where I put the values I want terraform to display for me without needing to go to the AWS console.
+3. Defined my `provider.tf`, `variables.tf`, `output.tf`, and `script.sh`. In my `provider.tf` is where the provider I want to use, which is AWS is defined. The values I don't want exposed were put in my `variables.tf` and `output.tf` is where I put the values I want Terraform to display for me without needing to click through the AWS console.
 
 4. Applied Terraform:
 
@@ -46,6 +46,8 @@ EC2 public IP: 98.81.117.68
 RDS endpoint: `terraform-20260211100738749300000001.c4hycg8uaqla.us-east-1.rds.amazonaws.com`
 
 Website URL: http://98.81.117.68
+
+
 ![terraform](./images/terraform%20apply.jpg)
 
 ## Security group configurations
@@ -64,7 +66,9 @@ Two security groups were created to enforce the principle of least privilege:
 
 ![screenshot showing web security group](./images/security%20group%20for%20ec2%20instance.jpg)
 
+
 ![security group allowing only web instance](./images/security%20group%20for%20rds.jpg)
+
 
 ## Database and application server deployment
 
@@ -99,7 +103,9 @@ terraform state list
 ```
 This command confirmed that all required resources were successfully created and managed by Terraform.
 
+
 ![all resources verified, VPC,internet gateway e.tc. ](./images/terraform%20state%20list.jpg)
+
 
 ## Key resources in AWS 
 
@@ -112,6 +118,8 @@ The following are the resources that are created in the AWS:
 |RDS Engine	|MySQL 8.0|
 |Storage	| 20 GB, Free-Tier|
 |Security Groups	| EC2: SSH/HTTP, RDS: MySQL from EC2 only
+
+
 ![instance details in the console](./images/instance%20details.jpg)
 
 
@@ -139,7 +147,9 @@ sudo systemctl restart apache2
 
 ![PrestaShop setup page](./images/1.png)
 
+
 ![Admin panel login](./images/2.png)
+
 
 ![Store homepage](./images/3.png)
 
